@@ -6,8 +6,25 @@
 # an FTP or SCP connection available.
 #
 
-# Customize the following variables according to your setup
 
+###
+# Requirements check
+###
+is_command_installed () {
+    if ! command -v $1 &> /dev/null
+    then
+        echo "${1} command is not available, please install it before running this script."
+        exit
+    fi
+}
+
+is_command_installed rsync
+is_command_installed lftp
+
+
+###
+# Customize the following variables according to your setup
+###
 declare -A CONSOLES=(
                      ["/home/pi"]="local"
                      ["pi@retropie:/home/pi"]="pitendo"
@@ -20,8 +37,9 @@ BACKUP="/home/pi/Backup/savegames/"
 MAX_NUMBER_OF_BACKUPS_KEPT=15
 TMP="/tmp"
 
-
-# No need to change anything below for setup
+###
+# Script logic, no need to change anything below for setup
+###
 NOW=`date +"%Y%m%d%H%M"`
 
 rm -Rf $TMP/savefiles || echo "Could not delete ${TMP}/savefiles"
