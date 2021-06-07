@@ -15,7 +15,7 @@ To schedule it on Linux:
 And add to your crontab the following row:
 
 ```
-@reboot sleep 100 && /home/pi/bash-retropie-savegame-sync/retropie-savegame-sync.sh
+@reboot sleep 100 && /home/pi/bash-retroarch-savegame-sync.sh/bash-retroarch-savegame-sync.sh.sh
 ```
 
 ## Important notice
