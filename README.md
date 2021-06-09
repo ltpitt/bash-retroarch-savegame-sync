@@ -12,10 +12,10 @@ To schedule it on Linux:
     $ crontab -e
     
     
-And add to your crontab the following row:
+For example you can schedule it at reboot adding the following row to your crontab:
 
 ```
-@reboot sleep 100 && /home/pi/bash-retroarch-savegame-sync.sh/bash-retroarch-savegame-sync.sh.sh
+@reboot /home/pi/bash-retroarch-savegame-sync/bash-retroarch-savegame-sync.sh
 ```
 
 ## Important notice
