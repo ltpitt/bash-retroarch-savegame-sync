@@ -1,5 +1,5 @@
-![Alt Text](https://github.com/ltpitt/bash-retroarch-savegame-sync/raw/main/logo/bash-retroarch-savegame-sync-logo-regular.jpg)
-![Alt Text](https://github.com/ltpitt/bash-retroarch-savegame-sync/raw/main/logo/bash-retroarch-savegame-sync-logo.jpg)
+![Alt Text](https://github.com/ltpitt/bash-retroarch-savegame-sync/raw/main/logo/bash-retroarch-savegame-sync-logo-regular.jpg)  
+![Alt Text](https://github.com/ltpitt/bash-retroarch-savegame-sync/raw/main/logo/bash-retroarch-savegame-sync-logo.gif)
 
 # Retroarch Savegame Sync
 This script allows to sync savegames to the newest one between two or more retroarch devices
