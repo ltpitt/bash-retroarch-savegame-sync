@@ -9,15 +9,9 @@ This script allows to sync savegames to the newest one between two or more retro
 * Customize the variables in the beginnin of the script, if needed
 * Run the script using /path/to/your/folder/bash-retroarch-savegame-sync.sh or schedule it
 
-To schedule it on Linux:
-
-    $ crontab -e
-    
-For example you can schedule it at reboot adding the following row to your crontab:
-
-```
-@reboot /path/to/your/folder/bash-retroarch-savegame-sync/bash-retroarch-savegame-sync.sh
-```
+## How to schedule automatic script execution
+* If you have Windows: https://technet.microsoft.com/en-us/library/cc748993(v=ws.11).aspx
+* If you have Linux or Mac: https://www.howtogeek.com/101288/how-to-schedule-tasks-on-linux-an-introduction-to-crontab-files/
 
 ## Important notice
 The script is just a quick hack and in beta version. It will make a complete backup of all the savegames in the folder specified among the variables.  Nonetheless this is not bullet proof and test it at your own risk.  More updates will come, have fun!
