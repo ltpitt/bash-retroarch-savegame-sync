@@ -19,6 +19,7 @@ readonly START=`date +%s`
 readonly BACKUP="/home/pi/Backup/savegames/"
 readonly MAX_NUMBER_OF_BACKUPS_KEPT=15
 readonly TMP="/tmp"
+readonly NOW=`date +"%Y%m%d%H%M"`
 
 ###
 # Script logic, no need to change anything below for setup
@@ -51,10 +52,11 @@ log_status () {
 
 
 clean_up () {
-    rm -rf $TMP/savefiles/*.lftp-pget-status || echo "Could not delete ${TMP}/savefiles/*.lftp-pget-status"
-    rm -rf $TMP/savestates/*.lftp-pget-status || echo "Could not delete ${TMP}/savestates/*.lftp-pget-status"
-    rm -Rf $TMP/savefiles || echo "Could not delete ${TMP}/savefiles"
-    rm -Rf $TMP/savestates || echo "Could not delete ${TMP}/savestates"
+    echo "Cleaning up data saved in $TMP"
+    rm -rf $TMP/savefiles/*.lftp-pget-status
+    rm -rf $TMP/savestates/*.lftp-pget-status
+    rm -Rf $TMP/savefiles
+    rm -Rf $TMP/savestates
     ITEMS_IN_BACKUP_FOLDER=$(ls $BACKUP  | wc -l)
     if [ "$ITEMS_IN_BACKUP_FOLDER" -gt $MAX_NUMBER_OF_BACKUPS_KEPT ]; then
         echo "Deleting oldest backup"
@@ -65,8 +67,9 @@ clean_up () {
 
 
 check_requirements
-NOW=`date +"%Y%m%d%H%M"`
 
+mkdir -p $TMP/savefiles
+mkdir -p $TMP/savestates
 
 ###
 # Getting existing savefiles and savegames for every available device
@@ -108,6 +111,7 @@ for CONSOLE in "${!CONSOLES[@]}";
             
             rsync -actzp $CONSOLE/savestates $BACKUP$NOW/${CONSOLES[$CONSOLE]}
         fi
+        
         status="Putting savefiles data (in order to keeping the most recent ones from any device) for ${CONSOLES[$CONSOLE]} in /tmp"
         source="${BACKUP}${NOW}/${CONSOLES[$CONSOLE]}/savefiles"
         target="${TMP}/savefiles"
@@ -127,8 +131,6 @@ for CONSOLE in "${!CONSOLES[@]}";
 ###
 # Sending most recent savefiles and savegames to every available device
 ###
-mkdir -p $TMP/savefiles
-mkdir -p $TMP/savestates
 for CONSOLE in "${!CONSOLES[@]}";
     do
         if [[ $CONSOLE == "ftp"* ]]; then
