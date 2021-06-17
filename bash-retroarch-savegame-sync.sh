@@ -1,7 +1,7 @@
 # BASH Retroarch Savegame Sync
 # https://github.com/ltpitt
 #
-# This script keeps to keep savegames in sync between
+# This script keeps savefiles and savestates in sync between
 # Retroarch devices (e.g. a Raspberry Pi 3 and a PS Vita) that have
 # an FTP or SCP connection available.
 
@@ -34,6 +34,8 @@ check_requirements () {
             exit
         fi
     done
+    mkdir -p $TMP/savefiles
+    mkdir -p $TMP/savestates    
 }
 
 
@@ -65,11 +67,7 @@ clean_up () {
     fi
 }
 
-
 check_requirements
-
-mkdir -p $TMP/savefiles
-mkdir -p $TMP/savestates
 
 ###
 # Getting existing savefiles and savegames for every available device
@@ -167,7 +165,6 @@ for CONSOLE in "${!CONSOLES[@]}";
             rsync -actzp $TMP/savestates $CONSOLE
         fi
     done
-
 
 clean_up
 
