@@ -1,3 +1,9 @@
+[![GitHub Issues](https://img.shields.io/github/issues-raw/ltpitt/bash-retroarch-savegame-sync)](https://github.com/ltpitt/bash-retroarch-savegame-sync/issues)
+![Total Commits](https://img.shields.io/github/last-commit/ltpitt/bash-retroarch-savegame-sync)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/4w/ltpitt/bash-retroarch-savegame-sync?foo=bar)
+[![License](https://img.shields.io/badge/license-GNU-blue.svg)](https://raw.githubusercontent.com/ltpitt/bash-retroarch-savegame-sync/master/LICENSE)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+
 ![Retroarch Savegame Sync Logo](https://github.com/ltpitt/bash-retroarch-savegame-sync/raw/main/logo/bash-retroarch-savegame-sync-logo.gif)  
 
 # Retroarch Savegame Sync
