@@ -8,12 +8,13 @@
 ###
 # Customize the following variables according to your setup
 ###
-readonly -A CONSOLES=(
+declare -A CONSOLES=(
                      ["/home/pi"]="local"
-                     ["pi@retropie:/home/pi"]="pitendo"
-                     ["ftp://nintendowii/sd/retroarch"]="nintendowii"
-                     ["ftp://psvita:1337/ux0:/data/retroarch"]="psvita"
+                     ["pi@192.168.1.170:/home/pi"]="pitendo"
+                     ["ftp://192.168.1.171/sd/retroarch"]="nintendowii"
+                     ["ftp://192.168.1.172:1337/ux0:/data/retroarch"]="psvita"
                     )
+
 
 readonly START=`date +%s`
 readonly BACKUP="/home/pi/Backup/savegames/"
