@@ -40,6 +40,30 @@ check_requirements () {
 }
 
 
+check_hosts () {
+    for CONSOLE in "${!CONSOLES[@]}";
+    do
+        if [[ ${CONSOLES[$CONSOLE]} == "local" ]]; then
+            continue
+        fi
+        read ip < <(echo $CONSOLE | grep -o '[0-9]\+[.][0-9]\+[.][0-9]\+[.][0-9]\+')
+        if [[ $CONSOLE == "ftp"* ]]; then
+            local port=21
+        else
+            local port=22
+        fi
+        echo
+        echo Checking $CONSOLE - ${CONSOLES[$CONSOLE]} availability...
+        if nc -z -w1 "$ip" "$port"; then
+            echo "Port ${port} on ip ${ip} is listening."
+        else
+            echo "Port ${port} on ip ${ip} is not listening, skipping host. Please verify its status or the Retroarch Sync's configuration."
+            unset CONSOLES[$CONSOLE]
+        fi
+    done
+}
+
+
 log_status () {
     local status=$1
     local source=$2
@@ -68,7 +92,10 @@ clean_up () {
     fi
 }
 
+
 check_requirements
+check_hosts
+
 
 ###
 # Getting existing savefiles and savegames for every available device
