@@ -86,7 +86,7 @@ clean_up () {
     rm -Rf $TMP/savestates
     ITEMS_IN_BACKUP_FOLDER=$(ls $BACKUP  | wc -l)
     if [ "$ITEMS_IN_BACKUP_FOLDER" -gt $MAX_NUMBER_OF_BACKUPS_KEPT ]; then
-        echo "Deleting oldest backup"
+        echo "Deleting oldest backup: $(ls $BACKUP -A1t | tail -n -1)"
         cd $BACKUP
         ls $BACKUP -A1t | tail -n -1 | xargs rm -R
     fi
