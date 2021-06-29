@@ -7,8 +7,8 @@
 ![Retroarch Savegame Sync Logo](https://github.com/ltpitt/bash-retroarch-savegame-sync/raw/main/logo/bash-retroarch-savegame-sync-logo.gif)  
 
 # Retroarch Savegame Sync
-This script allows to sync savegames to the newest one between two or more retroarch devices.  
-It is able to work with three types of connections: local (you can plugin the sdcard / usb drive from a handheld or a console and specify its path), SCP (be sure to specify the path with user e.g. pi@192.168.1.170:/home/pi) or FTP (e.g. ftp://192.168.1.171/sd/retroarch).  
+This script allows to sync Retroarch's savestates and savefiles to between two or more Retroarch devices.  
+It is able to work with three types of connections: local (simply using local filesystem, you can also plug sdcard or usb drives from handhelds or a consoles to the machine running the script), SCP (be sure to specify the path with user e.g. pi@192.168.1.170:/home/pi) or FTP (e.g. ftp://192.168.1.171/sd/retroarch).  
 The script gets the data in its location copies all the savestates and savegames, makes a backup, merges them in the local tmp folder only keeping the most recently modified ones and then copies the newest ones again to all the consoles.  
 Please keep in mind that in order to have working savestates you should be using the same rom / iso and the same core (emulator) version and sometimes this still does not work between different platforms.  
 Savefiles, on the other hand, are the original way to save game progression on physical cartridges or memory cards and those generally work just fine, even between different cores / platforms.  
