@@ -20,7 +20,7 @@ Savefiles, on the other hand, are the original way to save game progression on p
 * In order to use SCP please setup a passwordless connection. Here's how to obtain such result: https://www.ssh.com/ssh/copy-id
 
 ## Installation and usage
-* Clone the repository or simply download it as a zip file and unzip it in your home folder
+* Clone the repository or simply download it as a zip file and unzip it in a folder
 * Customize the variables in the beginning of the script. It is mandatory to define **console name** and **path** customizing the example you will find in the **CONSOLES** variable. For other variables default values should be ok for most users. **For the moment being the script works ONLY using IP addresses**
 * Make the script executable: `chmod +x bash-retroarch-savegame-sync.sh`
 * Run it: `./bash-retroarch-savegame-sync.sh` or schedule it
