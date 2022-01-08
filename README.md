@@ -44,6 +44,7 @@ The script is just a quick hack and in beta version. It will make a complete bac
 Here's some list of software you can run on your consoles in order to let the script connect via FTP:
 - PS Vita - [Ftp Everywhere](https://github.com/teakhanirons/ftpeverywhere/)
 - PS Vita - [BGFTP](https://github.com/GrapheneCt/BGFTP)
+- Wii - [Ftpii](https://wiibrew.org/wiki/Ftpii)
 
 ### Contribution guidelines ###
 
