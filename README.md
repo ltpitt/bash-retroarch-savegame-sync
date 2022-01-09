@@ -41,9 +41,10 @@ Savefiles, on the other hand, are the original way to save game progression on p
 The script is just a quick hack and in beta version. It will make a complete backup of all the savegames in the folder specified among the variables.  Nonetheless this is not bullet proof and test it at your own risk.  More updates will come, have fun!
 
 ## FTP Software suggestions
-Here's some list of software you can run on your consoles in order to let the script connect via FTP:
-- PS Vita - [Ftp Everywhere](https://github.com/teakhanirons/ftpeverywhere/)
-- PS Vita - [BGFTP](https://github.com/GrapheneCt/BGFTP)
+I would like to provide you some application that you can run on your consoles in order to let the script connect via FTP.  
+
+Here's a list of software I personally tested successfully using Retroach Savegame Sync:
+- PS Vita - [VitaShell](https://github.com/TheOfficialFloW/VitaShell)
 - Wii - [Ftpii](https://wiibrew.org/wiki/Ftpii)
 
 ### Contribution guidelines ###
