@@ -47,6 +47,10 @@ Here's a list of software I personally tested successfully using Retroach Savega
 - PS Vita - [VitaShell](https://github.com/TheOfficialFloW/VitaShell)
 - Wii - [Ftpii](https://wiibrew.org/wiki/Ftpii)
 
+The following applications are not tested yet but seem interesting, mainly for the possiblity to always run in background:
+- PS Vita - [Ftp Everywhere](https://github.com/teakhanirons/ftpeverywhere/)
+- PS Vita - [BGFTP](https://github.com/GrapheneCt/BGFTP)
+
 ### Contribution guidelines ###
 
 * If you have any idea or suggestion contact directly the Repo Owner
